@@ -10,7 +10,7 @@ import android.util.Log;
  */
 
 public class HipotecaDbHelper extends SQLiteOpenHelper {
-    private static int version = 1;
+    private static int version = 2;
     private static String name = "HipotecaDb" ;
     private static SQLiteDatabase.CursorFactory factory = null;
 
@@ -54,6 +54,12 @@ public class HipotecaDbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
-
+        if (newVersion == 2)
+        {
+            db.execSQL("UPDATE HIPOTECA SET hip_contacto = 'Julián Gómez Martínez'," +
+                    "              hip_email = 'jgmartinez@gmail.com'," +
+                    "              hip_observaciones = 'Tiene toda la documentación y está estudiando la solicitud. En breve llamará para informar de las condiciones'" +
+                    " WHERE _id = 1");
+        }
     }
 }

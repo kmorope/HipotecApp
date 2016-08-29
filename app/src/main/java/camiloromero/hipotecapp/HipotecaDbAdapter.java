@@ -47,4 +47,14 @@ public class HipotecaDbAdapter {
 
         return c;
     }
+
+    public Cursor getRegistro(long id) throws SQLException
+    {
+        Cursor c = db.query( true, C_TABLA, columnas, C_COLUMNA_ID + "=" + id, null, null, null, null, null);
+
+        if (c != null) {
+            c.moveToFirst();
+        }
+        return c;
+    }
 }
