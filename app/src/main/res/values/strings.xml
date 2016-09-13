@@ -22,5 +22,9 @@
     <string name="hipoteca_editar_confirmacion">Hipoteca modificada</string>
     <string name="menu_editar">Editar</string>
     <string name="menu_visualizar">Ver</string>
+    <string name="label_pasivo">Pasivo</string>
+    <string name="menu_preferencias">Configuracion</string>
+    <string name="label_situacion">Situacion</string>
+    <string name="title_activity_hipoteca_formulario">Hipoteca Formulario</string>
 
 </resources>

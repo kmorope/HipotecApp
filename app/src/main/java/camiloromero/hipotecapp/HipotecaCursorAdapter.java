@@ -2,6 +2,7 @@ package camiloromero.hipotecapp;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +29,17 @@ public class HipotecaCursorAdapter extends CursorAdapter {
         TextView tv = (TextView) view ;
 
         tv.setText(cursor.getString(cursor.getColumnIndex(HipotecaDbAdapter.C_COLUMNA_NOMBRE)));
+
+        if (cursor.getString(cursor.getColumnIndex(HipotecaDbAdapter.C_COLUMNA_PASIVO)).equals("S"))
+        {
+            tv.setTextColor(Color.GRAY);
+        }
+        else
+        {
+            tv.setTextColor(Color.BLACK);
+        }
     }
+
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent)

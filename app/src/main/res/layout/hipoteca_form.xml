@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    tools:context=".HipotecaFormulario" >
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -27,12 +27,28 @@
             android:ems="10" />
 
         <TextView
+            android:id="@+id/label_situacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_situacion"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/nombre"
+            android:layout_marginTop="20dp" />
+
+        <Spinner
+            android:id="@+id/situacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label_situacion"
+            android:ems="10"/>
+
+        <TextView
             android:id="@+id/label_condiciones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_condiciones"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_below="@+id/nombre"
+            android:layout_below="@+id/situacion"
             android:layout_marginTop="20dp" />
 
         <EditText
@@ -119,11 +135,21 @@
             android:inputType="textMultiLine">
         </EditText>
 
+        <CheckBox
+            android:id="@+id/pasivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/observaciones"
+            android:layout_below="@+id/observaciones"
+            android:layout_marginTop="20dp"
+            android:text="@string/label_pasivo" />
+
+
         <LinearLayout
             android:id="@+id/botonera"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/observaciones"
+            android:layout_below="@id/pasivo"
             android:gravity="center"
             android:layout_marginTop="20dp"
             android:orientation="horizontal" >
@@ -142,6 +168,6 @@
 
         </LinearLayout>
 
-    </RelativeLayout>
 
+    </RelativeLayout>
 </ScrollView>
