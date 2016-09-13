@@ -119,5 +119,29 @@
             android:inputType="textMultiLine">
         </EditText>
 
+        <LinearLayout
+            android:id="@+id/botonera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/observaciones"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/boton_cancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boton_cancelar" />
+
+            <Button
+                android:id="@+id/boton_guardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boton_guardar" />
+
+        </LinearLayout>
+
     </RelativeLayout>
+
 </ScrollView>

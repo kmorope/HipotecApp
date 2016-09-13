@@ -62,4 +62,8 @@ public class HipotecaDbHelper extends SQLiteOpenHelper {
                     " WHERE _id = 1");
         }
     }
+
+
+
+
 }
